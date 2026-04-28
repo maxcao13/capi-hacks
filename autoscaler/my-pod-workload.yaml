@@ -4,9 +4,8 @@ metadata:
   name: scale-up
   labels:
     app: scale-up
-  namespace: default
 spec:
-  replicas: 0
+  replicas: 0 
   selector:
     matchLabels:
       app: scale-up
@@ -17,20 +16,13 @@ spec:
     spec:
       nodeSelector:
         node.cluster.x-k8s.io: workload-target
-      affinity:
-        podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchLabels:
-                  app: scale-up
-              topologyKey: kubernetes.io/hostname
       containers:
         - name: busybox
           image: quay.io/elmiko/busybox
           resources:
             requests:
-              memory: 1G
-              cpu: 1
+              memory: 2G
+              cpu: 500m
           command:
             - /bin/sh
             - "-c"

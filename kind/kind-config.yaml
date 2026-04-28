@@ -9,7 +9,7 @@ nodes:
   extraMounts:
     - hostPath: /var/run/docker.sock
       containerPath: /var/run/docker.sock
-    - hostPath: /home/mike/capi-hacks/kind/patches
+    - hostPath: /home/macao/capi-hacks/kind/patches
       containerPath: /patches
 containerdConfigPatches:
 - |-

@@ -9,4 +9,4 @@ else
     kubeconfig_flag=""
 fi
 
-kubectl $kubeconfig_flag apply -f https://docs.projectcalico.org/v3.15/manifests/calico.yaml
+kubectl $kubeconfig_flag apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.30.3/manifests/calico.yaml

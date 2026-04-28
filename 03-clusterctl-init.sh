@@ -6,10 +6,10 @@ else
     kubeconfig_flag="--kubeconfig $1"
 fi
 
-capi_version="v1.9.99"
-capk_version="v0.9.99"
+capi_version="v1.10.99"
+capk_version="v0.10.1"
 
-/home/mike/cluster-api/bin/clusterctl init \
+~/cluster-api/bin/clusterctl init \
     --core cluster-api:$capi_version \
     --bootstrap kubeadm:$capi_version \
     --control-plane kubeadm:$capi_version \
